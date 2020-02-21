@@ -1,6 +1,8 @@
 package com.danielogbuti.spammessaging;
 
+import java.util.List;
+
 public interface MessageListener {
 
-    void messageReceived(String message);
+    void messageReceived(List<String> message);
 }
