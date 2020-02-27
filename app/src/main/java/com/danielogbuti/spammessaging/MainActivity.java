@@ -1,6 +1,7 @@
 package com.danielogbuti.spammessaging;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -22,17 +23,21 @@ public class MainActivity extends AppCompatActivity implements MessageListener {
 
     TextView textView;
     private TextView textView2;
+    Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         textView = (TextView)findViewById(R.id.textView);
         textView2 = (TextView)findViewById(R.id.textView2);
 
 
         MessageReceiver.bindListener(this);
+
 
     }
 
